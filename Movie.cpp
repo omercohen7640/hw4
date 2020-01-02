@@ -86,14 +86,17 @@ Return value: BOOL - failed of succeeded
 **********************************************************************************/
 BOOL Movie::addScreening(int day, int hour)
 {
+    //if all the screening at this day are taken, don't insert
     if (screeningTime_.getElement(day, MAX_SCREENINGS_PER_DAY) != FREE)
     {
         return FALSE;
     }
     double len_in_hours = static_cast<double>(movieLength_)/60;
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
+        //if the slot is empty (no screening scheduled)
         if (screeningTime_.getElement(day, i) == FREE)
         {
+            //if its not the first slot we can check in comparison to prev screening
             if (i > 0)
             {
                 if ((screeningTime_.getElement(day, i-1) + len_in_hours) > static_cast<double>(hour))
@@ -106,6 +109,7 @@ BOOL Movie::addScreening(int day, int hour)
                     return TRUE;
                 }
             }
+            //if its the first slot and its empty then insert the screening
             else if (i == 0)
             {
                 screeningTime_.setElement(day, i+1, hour);
@@ -122,9 +126,13 @@ Parameters: day - screening day
             hour - screening hour
 Return value: int- time of next screening
 **********************************************************************************/
-int getNextScreening(int day, int hour)
+int Movie::getNextScreening(int day, int hour)
 {
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
-
+        if (screeningTime_.getElement(day, i) >= hour)
+        {
+            return screeningTime_.getElement(day, i);
+        }
     }
+    return FALSE;
 }

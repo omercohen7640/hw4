@@ -60,10 +60,10 @@ BOOL DubbedMovie::addHebrewScreening(int day, int hour)
         if (HEBScreeningTime_.getElement(day, i+1) == FREE) {
             //if its not the first slot we can check in comparison to prev screening
             if (i > 0) {
-                if ((HEBScreeningTime_.getElement(day, i - 1) + len_in_hours) > static_cast<double>(hour)) {
+                if ((HEBScreeningTime_.getElement(day, i ) + len_in_hours) > static_cast<double>(hour)) {
                     return FALSE;
                 } else {
-                    HEBScreeningTime_.setElement(day, i, hour);
+                    HEBScreeningTime_.setElement(day, i + 1, hour);
                     return TRUE;
                 }
             }

@@ -95,13 +95,13 @@ BOOL Movie::addScreening(int day, int hour)
             //if its not the first slot we can check in comparison to prev screening
             if (i > 0)
             {
-                if ((screeningTime_.getElement(day, i-1) + len_in_hours) > static_cast<double>(hour))
+                if ((screeningTime_.getElement(day, i) + len_in_hours) > static_cast<double>(hour))
                 {
                     return FALSE;
                 }
                 else
                 {
-                    screeningTime_.setElement(day, i, hour);
+                    screeningTime_.setElement(day, i + 1, hour);
                     return TRUE;
                 }
             }
@@ -126,9 +126,9 @@ Return value: int- time of next screening
 int Movie::getNextScreening(int day, int hour)
 {
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
-        if (screeningTime_.getElement(day, i) > hour)
+        if (screeningTime_.getElement(day, i + 1) > hour)
         {
-            return screeningTime_.getElement(day, i);
+            return screeningTime_.getElement(day, i + 1);
         }
     }
     return FALSE;

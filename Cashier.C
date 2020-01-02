@@ -30,11 +30,11 @@ int sellTicketsHelp(int movie_theater_num,int movie_price, Theater *p_theater, i
 {
     if (row <=0 || col <= 0 || row > p_theater->getRowsNum() || (col+tickets_num) > p_theater->getColumnsNum()) return 0; // ilegal row or col
     if (movie_theater_num != p_theater->getTheaterNum()) return 0; // check if the movie is shown in the given theater
-    for (int i = 0; i < tickets_num; ++i) {
-        if (p_theater->getElement(row,col + i) == TAKEN ) return 0;
+    for (int i = col; i < col + tickets_num; ++i) {
+        if (p_theater->getElement(row,i-1) == TAKEN ) return 0;
     }
-    for (int i = 0; i < tickets_num; i++) {
-        p_theater->setElement(row,col + i,TAKEN);
+    for (int i = col ; i < col + tickets_num; i++) {
+        p_theater->setElement(row,i - 1,TAKEN);
     }
     return tickets_num * movie_price;
 }

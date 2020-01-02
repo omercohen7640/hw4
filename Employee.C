@@ -39,9 +39,11 @@ int Employee::getSalary() {
 }
 
 void shift_cpy(char* dest, const char* src){
-    for (int i = 0; i < 5; ++i) {
+    int i;
+    for (i = 0; i < 5; ++i) {
         *(dest + i) = *(src + i);
     }
+    *(dest + i) = '\0';
 }
 
 
@@ -54,14 +56,15 @@ Return value: weekly salary of an employee
 int Employee::calcWeeklySalary(){
     const char* delimiters = "-";
     int begin, end, sum=0;
-    char shift[5];
+    char shift[6];
     char* hour;
     for (int i = 0; i < 7; i++)
     {
         shift_cpy(shift,*(hours_+i));
         hour = strtok(shift,delimiters);
-        begin = atoi(strtok(NULL,delimiters));
-        end = atoi(strtok(NULL,delimiters));
+        begin = atoi(hour);
+        hour = strtok(NULL,delimiters);
+        end = atoi(hour);
         if (begin > end) sum = sum + (24 - begin)*salary_ + end * salary_;
         else sum = sum + (end - begin)*salary_;
     }

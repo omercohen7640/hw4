@@ -11,7 +11,9 @@
 //class Cashier : public Employee
 class DubbedMovie : public Movie{
 public:
-
+    DubbedMovie()
+    int getHebrewTheaterNum();
+    int getNextHebrewScreening(int date, int hour);
 
 protected:
     int hebrewTheaterNum;

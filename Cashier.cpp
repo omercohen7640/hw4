@@ -61,7 +61,7 @@ int Cashier::sellTickets(Movie *p_movie, Theater *p_theater, BOOL dubbed, int ti
     }
     else{
         d_movie = (DubbedMovie*)p_movie;
-        return sellTicketsHelp(p_movie->getHebrewTheaterNum(),p_movie->getTicketPrice(),p_theater,tickets_num,row,col);
+        return sellTicketsHelp(d_movie->getHebrewTheaterNum(),d_movie->getTicketPrice(),p_theater,tickets_num,row,col);
     }
 }
 

@@ -2,7 +2,7 @@
 // Created by omerc on 28/12/2019.
 //
 
-#include "Cashier.h"
+#include "Cashier.H"
 #include "DubbedMovie.h"
 
 /*********************************************************************************

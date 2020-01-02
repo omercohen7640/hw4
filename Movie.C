@@ -90,7 +90,7 @@ BOOL Movie::addScreening(int day, int hour)
     double len_in_hours = static_cast<double>(movieLength_)/60;
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
         //if the slot is empty (no screening scheduled)
-        if (screeningTime_.getElement(day, i) == FREE)
+        if (screeningTime_.getElement(day, i+1) == FREE)
         {
             //if its not the first slot we can check in comparison to prev screening
             if (i > 0)

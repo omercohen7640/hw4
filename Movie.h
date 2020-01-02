@@ -55,9 +55,9 @@ Return value: int- theater number
 Function name: getTicketPrice
 Description: gets the movie ticket price
 Parameters: None
-Return value: int- price
+Return value: static int- price
 **********************************************************************************/
-        int getTicketPrice();
+        static int getTicketPrice();
 /*********************************************************************************
 Function name: addScreening
 Description: add a movie

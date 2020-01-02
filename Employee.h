@@ -26,7 +26,7 @@ public:
      hours[] - array of 7 wth work hours string
     Return value: -
     **********************************************************************************/
-    Employee(char **hours, char *name, int salary=0);
+    Employee( char *name, int salary, char **hours);
 
     /*********************************************************************************
     Function name: ~employee

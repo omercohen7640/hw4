@@ -18,7 +18,7 @@ public:
     Parameters: -
     Return value: -
     **********************************************************************************/
-    Cashier(char **hours, char *name, int salary);
+    Cashier(char *name, int salary, char **hours);
 
 
     /*********************************************************************************

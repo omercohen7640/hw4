@@ -11,7 +11,7 @@ Description: c'tor
 Parameters: -
 Return value: -
 **********************************************************************************/
-Cashier::Cashier(char **hours, char *name, int salary) : Employee(hours, name, salary),ticket_profit_(0) {
+Cashier::Cashier( char *name, int salary, char **hours) : Employee( name, salary, hours),ticket_profit_(0) {
 
 }
 

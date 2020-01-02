@@ -2,7 +2,7 @@
 // Created by omerc on 28/12/2019.
 //
 
-#include "DubbedMovie.h"
+#include "DubbedMovie.H"
 
 
 /*********************************************************************************
@@ -57,27 +57,22 @@ BOOL DubbedMovie::addHebrewScreening(int day, int hour)
     double len_in_hours = static_cast<double>(movieLength_)/60;
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
         //if the slot is empty (no screening scheduled)
-        if (HEBScreeningTime_.getElement(day, i) == FREE)
-        {
+        if (HEBScreeningTime_.getElement(day, i) == FREE) {
             //if its not the first slot we can check in comparison to prev screening
-            if (i > 0)
-            {
-                if ((HEBScreeningTime_.getElement(day, i-1) + len_in_hours) > static_cast<double>(hour))
-                {
+            if (i > 0) {
+                if ((HEBScreeningTime_.getElement(day, i - 1) + len_in_hours) > static_cast<double>(hour)) {
                     return FALSE;
-                }
-                else
-                {
+                } else {
                     HEBScreeningTime_.setElement(day, i, hour);
                     return TRUE;
                 }
             }
                 //if its the first slot and its empty then insert the screening
-            else if (i == 0)
-            {
-                HEBScreeningTime_.setElement(day, i+1, hour);
+            else if (i == 0) {
+                HEBScreeningTime_.setElement(day, i + 1, hour);
                 return TRUE;
             }
         }
     }
+    return FALSE;
 }

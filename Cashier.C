@@ -3,7 +3,7 @@
 //
 
 #include "Cashier.H"
-#include "DubbedMovie.h"
+#include "DubbedMovie.H"
 
 /*********************************************************************************
 Function name: Cashier

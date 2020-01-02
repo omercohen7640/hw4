@@ -2,7 +2,7 @@
 // Created by omerc on 28/12/2019.
 //
 
-#include "Theater.h"
+#include "Theater.H"
 
 /*********************************************************************************
 Function name: Theater

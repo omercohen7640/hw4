@@ -7,17 +7,46 @@
 
 #include "Movie.h"
 #include "Theater.h"
+#include "Mat.h"
+
 
 //class Cashier : public Employee
 class DubbedMovie : public Movie{
-public:
-    DubbedMovie()
-    int getHebrewTheaterNum();
-    int getNextHebrewScreening(int date, int hour);
+    public:
+/*********************************************************************************
+Function name: DubbedMovie
+Description: constructor
+Parameters: HEBtheaterNum - number of theater
+Return value: None
+**********************************************************************************/
+        DubbedMovie (char* name, int length, char* language, int theaterNum, int HEBtheaterNum);
+/*********************************************************************************
+Function name: getHebrewTheaterNum
+Description: gets the theater number of this movie
+Parameters: None
+Return value: int - the number of the theater
+**********************************************************************************/
+        int getHebrewTheaterNum();
+/*********************************************************************************
+Function name: getNextHebrewScreening
+Description: gets the next screening
+Parameters: date - the day
+            hour - the time
+Return value: int - the hour of the next screening
+**********************************************************************************/
+        int getNextHebrewScreening(int date, int hour);
+/*********************************************************************************
+Function name: addHebrewScreening
+Description: adds a screening
+Parameters: day- the day
+            hour - the time
+Return value: BOOL - adding failed or succeeded
+**********************************************************************************/
+        BOOL addHebrewScreening(int day, int hour);
 
-protected:
-    int hebrewTheaterNum;
-    Mat hebrewScreeningTime;
+    protected:
+        int HEBTheaterNum_;
+        Mat HEBScreeningTime_;
 
 
 

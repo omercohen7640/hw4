@@ -16,11 +16,7 @@ Parameters: name - name of movie
 Return value: None
 **********************************************************************************/
 Movie::Movie (char* name, int length, char* language, int theaterNum):
-        movieName_(name), movieLength_(length), movieLanguage_(language), movieTheaterNum_(theaterNum), screeningTime_(DAYS_IN_WEEK, MAX_SCREENINGS_PER_DAY)
-{
-    //movieName_ = name;
-    //movieLanguage_ = language;
-}
+        movieName_(name), movieLength_(length), movieLanguage_(language), movieTheaterNum_(theaterNum), screeningTime_(DAYS_IN_WEEK, MAX_SCREENINGS_PER_DAY) {}
 
 /*********************************************************************************
 Function name: getName

@@ -7,8 +7,8 @@
 
 #define DAYS_IN_WEEK 7
 
-#include "proj.h"
-#include "Mat.h"
+#include "Proj.H"
+#include "Mat.H"
 
 
 class Movie {

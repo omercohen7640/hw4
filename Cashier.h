@@ -5,10 +5,10 @@
 #ifndef HW_4_CASHIER_H
 #define HW_4_CASHIER_H
 
-#include "Movie.h"
-#include "Employee.h"
-#include "Theater.h"
-#include "proj.h"
+#include "Movie.H"
+#include "Employee.H"
+#include "Theater.H"
+#include "Proj.H"
 
 class Cashier : public Employee {
 public:

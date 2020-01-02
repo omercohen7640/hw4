@@ -5,7 +5,7 @@
 #ifndef HW_4_THEATER_H
 #define HW_4_THEATER_H
 
-#include "Mat.h"
+#include "Mat.H"
 
 class Theater: public Mat {
 

@@ -38,6 +38,13 @@ int Employee::getSalary() {
     return salary_;
 }
 
+void shift_cpy(char* dest, const char* src){
+    for (int i = 0; i < 5; ++i) {
+        *(dest + i) = *(src + i);
+    }
+}
+
+
 /*********************************************************************************
 Function name: calcWeeklySalary
 Description: calculate the weekly salary of an employee
@@ -51,7 +58,7 @@ int Employee::calcWeeklySalary(){
     char* hour;
     for (int i = 0; i < 7; i++)
     {
-        strcpy_s(shift,5,*(hours_+i));
+        shift_cpy(shift,*(hours_+i));
         hour = strtok(shift,delimiters);
         begin = atoi(strtok(NULL,delimiters));
         end = atoi(strtok(NULL,delimiters));

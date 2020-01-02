@@ -5,9 +5,9 @@
 #ifndef HW_4_DUBBEDMOVIE_H
 #define HW_4_DUBBEDMOVIE_H
 
-#include "Movie.h"
-#include "Theater.h"
-#include "Mat.h"
+#include "Movie.H"
+#include "Theater.H"
+#include "Mat.H"
 
 
 //class Cashier : public Employee

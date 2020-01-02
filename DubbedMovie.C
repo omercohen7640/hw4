@@ -33,7 +33,7 @@ Return value: int - the hour of the next screening
 int DubbedMovie::getNextHebrewScreening(int date, int hour)
 {
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
-        if (HEBScreeningTime_.getElement(date, i) >= hour)
+        if (HEBScreeningTime_.getElement(date, i) > hour)
         {
             return HEBScreeningTime_.getElement(date, i);
         }

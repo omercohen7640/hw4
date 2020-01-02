@@ -126,7 +126,7 @@ Return value: int- time of next screening
 int Movie::getNextScreening(int day, int hour)
 {
     for (int i = 0; i <MAX_SCREENINGS_PER_DAY ; ++i) {
-        if (screeningTime_.getElement(day, i) >= hour)
+        if (screeningTime_.getElement(day, i) > hour)
         {
             return screeningTime_.getElement(day, i);
         }

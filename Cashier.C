@@ -56,12 +56,17 @@ Return value: -
 **********************************************************************************/
 int Cashier::sellTickets(Movie *p_movie, Theater *p_theater, BOOL dubbed, int tickets_num, int row, int col) {
     DubbedMovie* d_movie;
+    int current_sell;
     if (dubbed == FALSE){
-        return sellTicketsHelp(p_movie->getTheaterNum(),p_movie->getTicketPrice(),p_theater,tickets_num,row,col);
+        current_sell = sellTicketsHelp(p_movie->getTheaterNum(),p_movie->getTicketPrice(),p_theater,tickets_num,row,col);
+        ticket_profit_ += current_sell;
+        return current_sell;
     }
     else{
         d_movie = (DubbedMovie*)p_movie;
-        return sellTicketsHelp(d_movie->getHebrewTheaterNum(),d_movie->getTicketPrice(),p_theater,tickets_num,row,col);
+        current_sell= sellTicketsHelp(d_movie->getHebrewTheaterNum(),d_movie->getTicketPrice(),p_theater,tickets_num,row,col);
+        ticket_profit_ += current_sell;
+        return current_sell;
     }
 }
 

@@ -42,7 +42,7 @@ public:
     Return value: -
     **********************************************************************************/
     int sellTickets(Movie* p_movie, Theater* p_theater, BOOL dubbed, int tickets_num, int row, int col);
-private:
+protected:
     int ticket_profit_;
 };
 

@@ -14,6 +14,13 @@ Return value: None
 DubbedMovie::DubbedMovie(char *name, int length, char *language, int theaterNum, int HEBtheaterNum) :
                             Movie(name, length, language, theaterNum), HEBTheaterNum_(HEBtheaterNum), HEBScreeningTime_(DAYS_IN_WEEK, MAX_SCREENINGS_PER_DAY) {}
 /*********************************************************************************
+Function name: ~DubbedMovie
+Description: destructor
+Parameters: None
+Return value: None
+**********************************************************************************/
+DubbedMovie::~DubbedMovie(){}
+/*********************************************************************************
 Function name: getHebrewTheaterNum
 Description: gets the theater number of this movie
 Parameters: None

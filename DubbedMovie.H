@@ -21,6 +21,13 @@ Return value: None
 **********************************************************************************/
         DubbedMovie (char* name, int length, char* language, int theaterNum, int HEBtheaterNum);
 /*********************************************************************************
+Function name: ~DubbedMovie
+Description: destructor
+Parameters: None
+Return value: None
+**********************************************************************************/
+    ~DubbedMovie();
+/*********************************************************************************
 Function name: getHebrewTheaterNum
 Description: gets the theater number of this movie
 Parameters: None

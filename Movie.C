@@ -19,6 +19,13 @@ Movie::Movie (char* name, int length, char* language, int theaterNum):
         movieName_(name), movieLength_(length), movieLanguage_(language), movieTheaterNum_(theaterNum), screeningTime_(DAYS_IN_WEEK, MAX_SCREENINGS_PER_DAY) {}
 
 /*********************************************************************************
+Function name: ~Movie
+Description: destructor
+Parameters: None
+Return value: None
+**********************************************************************************/
+Movie::~Movie() {}
+/*********************************************************************************
 Function name: getName
 Description: gets the movie name
 Parameters: None

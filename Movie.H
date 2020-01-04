@@ -24,6 +24,13 @@ Return value: None
 **********************************************************************************/
         Movie (char* name, int length, char* language, int theaterNum);
 /*********************************************************************************
+Function name: ~Movie
+Description: destructor
+Parameters: None
+Return value: None
+**********************************************************************************/
+    virtual ~Movie();
+/*********************************************************************************
 Function name: getName
 Description: gets the movie name
 Parameters: None

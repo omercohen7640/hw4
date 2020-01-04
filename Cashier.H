@@ -20,7 +20,7 @@ public:
     **********************************************************************************/
     Cashier(char *name, int salary, char **hours);
 
-
+    ~Cashier();
     /*********************************************************************************
     Function name: getTicketProfit
     Description: return the the profit made by the cashier

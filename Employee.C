@@ -15,19 +15,13 @@ Employee::Employee() : salary_(0)
 
 }
 */
-Employee::Employee( char *name, int salary, char **hours) : salary_(salary)
+Employee::Employee( char *name, int salary, char **hours) :name_(name),hours_(hours),salary_(salary)
 {
-    name_ = name;
-    hours_ = hours;
+    //name_ = name;
+    //hours_ = hours;
 }
 
-Employee::~Employee()
-{
-    for (int i = 0; i < 7; i++) {
-        delete *(hours_ + i);
-    }
-    delete hours_;
-}
+Employee::~Employee(){}
 
 char* Employee::getName() const
 {

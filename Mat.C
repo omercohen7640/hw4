@@ -90,6 +90,7 @@ Return value: int - the value of element
 **********************************************************************************/
 int Mat::getElement(int row, int col)
 {
+    cout << matrix_[row-1][col-1] << endl;
     return matrix_[row-1][col-1];
 }
 

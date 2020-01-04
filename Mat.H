@@ -4,7 +4,9 @@
 
 #ifndef HW_4_MAT_H
 #define HW_4_MAT_H
+#include <iostream>
 
+using namespace std;
 
 class Mat {
 
